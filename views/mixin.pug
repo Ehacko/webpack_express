@@ -17,7 +17,10 @@ mixin heading(text, priority)
           block 
       when 6
         h6&attributes(attributes)=text
-          block 
+          block
+      default
+        p&attributes(attributes)=text
+          block
 
 mixin banner(text, priority)
   +heading(text, priority)(class="W-banner")
@@ -25,6 +28,3 @@ mixin banner(text, priority)
       div
       div
       div
-
-mixin test
-  p this is a mixin test
