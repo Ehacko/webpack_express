@@ -1,5 +1,7 @@
 body {
-  --colorA: white;
-  --colorB: black;
   --height: 50px;
+  --colorA: rgba(25, 25, 25, .9);
+  --colorB: rgba(225, 225, 225, .9);
+  background: var(--colorA);
+  color: var(--colorB);
 }
