@@ -2,11 +2,11 @@ mixin heading(text, priority)
   case priority
       when 1
         h1=text
-          block content
+          block heading
 
 mixin banner(text, priority)
   +heading(text, priority)
-    block content
+    block heading
       div
         div
         div
