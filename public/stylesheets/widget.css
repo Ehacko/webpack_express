@@ -7,7 +7,7 @@
   background: var(--colorA);
   position: relative;
   place-items: center;
-  margin: unset calc(( 100% - var(--bannerWidth) )/2 );
+  margin: auto calc(( 100% - var(--bannerWidth) )/2 );
   width: var(--bannerWidth);
   justify-self: center;
   height: var(--height);
