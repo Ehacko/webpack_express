@@ -1,6 +1,7 @@
 body {
   --colorA: white;
   --colorB: black;
+  --height: 50px;
 }
 
 a {
