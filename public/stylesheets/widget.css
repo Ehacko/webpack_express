@@ -28,10 +28,10 @@
   position: relative;
   width: calc(var(--height)*1.5);
   border: var(--colorB) calc(var(--height)/2) solid;
+  box-sizing: border-box;
 }
 
 .W-banner > :first-child > :nth-child(2){
-  box-sizing: border-box;
   border-bottom: 2px dotted var(--colorB);
 }
 
