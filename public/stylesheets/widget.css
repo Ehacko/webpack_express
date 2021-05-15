@@ -1,6 +1,6 @@
 *{box-sizing: border-box;}
 .W-banner{
-  --bannerWidth: calc(90% - (var(--height)*2))
+  --bannerWidth: calc(90% - (var(--height)*2));
   min-width: 100px;
   display: grid;
   border: 2px solid var(--colorB);
