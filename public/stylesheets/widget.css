@@ -1,13 +1,14 @@
 *{box-sizing: border-box;}
 .W-banner{
+  --bannerWidth: calc(90% - (var(--height)*2))
   min-width: 100px;
   display: grid;
   border: 2px solid var(--colorB);
   background: var(--colorA);
   position: relative;
   place-items: center;
-  margin: unset calc((100% - (90% - (var(--height)*2)))/2);
-  width: calc(90% - (var(--height)*2));
+  margin: unset calc(( 100% - var(--bannerWidth) )/2 );
+  width: var(--bannerWidth);
   justify-self: center;
   height: var(--height);
 }
