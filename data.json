@@ -1,0 +1,19 @@
+{
+    "routes":[
+        {
+            "name": "menus",
+            "path": "/menus",
+            "page": "menus"
+        },
+        {
+            "name": "recettes",
+            "path": "/recettes",
+            "page": "recettes"
+        },
+        {
+            "name": "search",
+            "path": "/search",
+            "page": "search"
+        }
+    ]
+}

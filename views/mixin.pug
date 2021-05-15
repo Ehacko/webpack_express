@@ -1,0 +1,13 @@
+mixin heading(text, priority)
+  case priority
+      when 1
+        h1=text
+          block content
+
+mixin banner(text, priority)
+  +heading(text, priority)
+    block content
+      div
+        div 
+        div 
+        div 
