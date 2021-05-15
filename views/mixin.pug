@@ -2,15 +2,14 @@ mixin heading(text, priority)
   case priority
       when 1
         h1=text
-          block heading
+          block 
 
 mixin banner(text, priority)
   +heading(text, priority)
-    block heading
+    div
       div
-        div
-        div
-        div
+      div
+      div
 
 mixin test
   p this is a mixin test
