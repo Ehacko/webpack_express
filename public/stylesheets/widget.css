@@ -13,36 +13,33 @@
   height: var(--height);
 }
   
-.W-banner > :first-child{
+.W-banner > *, .W-banner::before {
   position: absolute;
   top: 25%;
-  width: calc(100% + (var(--height)*2));
-  height: calc(100% + (2px*2));
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto 1fr auto;
   z-index: -2;
 }
 
-.W-banner > :first-child > :not(:nth-child(2)){
-  position: relative;
+.W-banner > * {
   width: calc(var(--height)*1.5);
   border: var(--colorB) calc(var(--height)/2) solid;
-  box-sizing: border-box;
+
 }
 
 .W-banner > :first-child > :nth-child(2){
+  content: "";
+  width: calc( 100% - (var(--height)*1.5) );
+  height: calc(100% + 2px);
   border-bottom: 2px dotted var(--colorB);
 }
 
 
-.W-banner > :first-child > :not(:nth-child(2))::before,
-.W-banner > :first-child > :not(:nth-child(2))::after{
+.W-banner > ::before,
+.W-banner > ::after{
   content: "";
   position: absolute;
 }
 
-.W-banner > :first-child > :not(:nth-child(2))::before{
+.W-banner > ::before{
   width: 100%;
   border: var(--colorA) calc((var(--height)/2) - 2px ) solid;
   top: calc((var(--height)/-2) + 2px);
@@ -50,7 +47,7 @@
   right: calc((var(--height)/-2));
 }
 
-.W-banner > :first-child > :not(:nth-child(2))::after{
+.W-banner > ::after{
   border: var(--colorB) solid;
   border-width: calc((var(--height)/7)) calc((var(--height)/4.4));
   border-bottom-color: transparent;
@@ -58,30 +55,30 @@
   top: unset;
 }
 
-.W-banner > :first-child > :nth-child(1){
+.W-banner > :nth-child(1){
+    right: calc(100% - (var(--height)/2));
     border-left-color: transparent;
     border-right-width: calc(var(--height)/1.75);
 } 
-.W-banner > :first-child > :nth-child(1)::before,
-.W-banner > :first-child > :nth-child(1)::after{
+.W-banner > :nth-child(1)::before,
+.W-banner > :nth-child(1)::after{
   border-left-color: transparent;
   left: unset;
 }
-.W-banner > :first-child > :nth-child(1)::after{
+.W-banner > :nth-child(1)::after{
   border-left-color: transparent;
 }
 
-.W-banner > :first-child > :nth-child(3){
-  border-right-color: transparent;
-  border-left-width: calc(var(--height)/1.75);
+.W-banner > :nth-child(2){
+    left: calc(100% - (var(--height)/2));
+    border-right-color: transparent;
+    border-left-width: calc(var(--height)/1.75);
 } 
-.W-banner > :first-child > :nth-child(3)::before,
-.W-banner > :first-child > :nth-child(3)::after{
+.W-banner > :nth-child(2)::before,
+.W-banner > :nth-child(2)::after{
   border-right-color: transparent;
   right: unset;
 }
-.W-banner > :first-child > :nth-child(3)::after{
+.W-banner > :nth-child(2)::after{
   border-right-color: transparent;
 }
-
-
