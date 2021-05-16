@@ -12,6 +12,13 @@
   justify-self: center;
   height: var(--height);
 }
+.W-banner::before{
+  position: absolute;
+  content: "";
+  width: calc( 100% - (var(--height)*1.5) );
+  border-bottom: 2px dotted var(--colorB);
+  top: 125%;
+}
   
 .W-banner > * {
   position: absolute;
@@ -20,20 +27,17 @@
   width: calc(var(--height)*1.5);
   border: var(--colorB) calc(var(--height)/2) solid;
 }
-
-.W-banner::before{
-  content: "";
-  width: calc( 100% - (var(--height)*1.5) );
-  border-bottom: 2px dotted var(--colorB);
-  top: 125%;
+.W-banner > :nth-child(1){
+  right: calc(100% - (var(--height)/2));
+  border-left-color: transparent;
+  border-right-width: calc(var(--height)/1.75);
 }
+.W-banner > :nth-child(2){
+  left: calc(100% - (var(--height)/2));
+  border-right-color: transparent;
+  border-left-width: calc(var(--height)/1.75);
+} 
 
-
-.W-banner > ::before,
-.W-banner > ::after{
-  content: "";
-  position: absolute;
-}
 
 .W-banner > ::before{
   width: 100%;
@@ -42,7 +46,21 @@
   left: calc((var(--height)/-2));
   right: calc((var(--height)/-2));
 }
-
+.W-banner > ::before,
+.W-banner > ::after{
+  content: "";
+  position: absolute;
+}
+.W-banner > :nth-child(1)::before,
+.W-banner > :nth-child(1)::after{
+  border-left-color: transparent;
+  left: unset;
+}
+.W-banner > :nth-child(2)::before,
+.W-banner > :nth-child(2)::after{
+  border-right-color: transparent;
+  right: unset;
+}
 .W-banner > ::after{
   border: var(--colorB) solid;
   border-width: calc((var(--height)/7)) calc((var(--height)/4.4));
@@ -50,30 +68,8 @@
   inset: calc((var(--height)/-2));
   top: unset;
 }
-
-.W-banner > :nth-child(1){
-    right: calc(100% - (var(--height)/2));
-    border-left-color: transparent;
-    border-right-width: calc(var(--height)/1.75);
-} 
-.W-banner > :nth-child(1)::before,
 .W-banner > :nth-child(1)::after{
   border-left-color: transparent;
-  left: unset;
-}
-.W-banner > :nth-child(1)::after{
-  border-left-color: transparent;
-}
-
-.W-banner > :nth-child(2){
-    left: calc(100% - (var(--height)/2));
-    border-right-color: transparent;
-    border-left-width: calc(var(--height)/1.75);
-} 
-.W-banner > :nth-child(2)::before,
-.W-banner > :nth-child(2)::after{
-  border-right-color: transparent;
-  right: unset;
 }
 .W-banner > :nth-child(2)::after{
   border-right-color: transparent;
