@@ -22,14 +22,13 @@
 .W-banner > * {
   width: calc(var(--height)*1.5);
   border: var(--colorB) calc(var(--height)/2) solid;
-  top: 125%;
 }
 
 .W-banner::before{
   content: "";
   width: calc( 100% - (var(--height)*1.5) );
-  height: calc(100% + 2px);
   border-bottom: 2px dotted var(--colorB);
+  top: 125%;
 }
 
 
