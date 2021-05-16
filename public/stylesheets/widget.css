@@ -25,7 +25,7 @@
 
 }
 
-.W-banner > :first-child > :nth-child(2){
+.W-banner::before{
   content: "";
   width: calc( 100% - (var(--height)*1.5) );
   height: calc(100% + 2px);
