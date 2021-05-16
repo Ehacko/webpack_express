@@ -17,9 +17,6 @@
   position: absolute;
   top: 25%;
   z-index: -2;
-}
-
-.W-banner > * {
   width: calc(var(--height)*1.5);
   border: var(--colorB) calc(var(--height)/2) solid;
 }
