@@ -318,6 +318,7 @@ variable for the class W-btn:
 [class*="W-inp"]:not([contenteditable="true"]):not(input):not(textarea) > [contenteditable="true"],
 [class*="W-inp"]:not([contenteditable="true"]):not(input):not(textarea) > input:not([type="checkbox"]):not([type="radio"]),
 [class*="W-inp"]:not([contenteditable="true"]):not(input):not(textarea) > textarea {
+  height: var(--W-height);
   padding: var(--W-padding);
   line-height: calc( var(--W-fontSize) * 1.5) !important;
   outline: 0;
