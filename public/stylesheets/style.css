@@ -1,5 +1,11 @@
 body {
   --W-height: 50px;
+  --W-primaryR: 25;
+  --W-secondaryR: 225;
+  --W-primaryG: 25;
+  --W-secondaryG: 225;
+  --W-primaryB: 25;
+  --W-secondaryB: 225;
   background: rgba(25, 25, 25);
   color: rgba(225, 225, 225, .9);
 }
