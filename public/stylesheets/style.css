@@ -1,6 +1,5 @@
 body {
   --W-height: 50px;
-  --colorB: rgba(225, 225, 225, .9);
-  background: var(--colorA);
-  color: var(--colorB);
+  background: rgba(25, 25, 25);
+  color: rgba(225, 225, 225, .9);
 }
