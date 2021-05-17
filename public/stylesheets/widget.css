@@ -58,22 +58,22 @@
   --W-overflowY: string;
   /* Style parameter */
   /* Red bits variables */
-  --W-primaryR: 255;
-  --W-secondaryR: var(--W-primaryR);
+  --W-primaryR: 225;
+  --W-secondaryR: 25;
   /* Green bits variables */
-  --W-primaryG: 255;
-  --W-secondaryG: var(--W-primaryG);
+  --W-primaryG: 225;
+  --W-secondaryG: 25;
   /* Blue bits variables */
-  --W-primaryB: 255;
-  --W-secondaryB: var(--W-primaryB);
+  --W-primaryB: 225;
+  --W-secondaryB: 25;
   /* Opacity variables */
   --W-primaryA: 1;
   --W-secondaryA: var(--W-primaryA);
 }
 
 /***************************************
-          *               Globals                *
-          ***************************************/
+*               Globals                *
+***************************************/
 /* dependent variables */
 [class*="W-"] {
   --W-red: var(--W-primaryR);
