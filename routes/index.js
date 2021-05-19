@@ -17,7 +17,7 @@ const router = express.Router();
     -post: pour ecouter les requete post c'est à dire les requetes envoyer dans le body de la page
     -all:  les requete get et post
 
-  Path: url au quel repondra le router.
+  Path: url auquel repondra le router.
 
   Pug_file: nom du fichier pug qui créera le rendu(le code html)
 
