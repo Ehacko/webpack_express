@@ -114,7 +114,7 @@
   background: rgb(var(--W-red), var(--W-green), var(--W-blue));
   position: relative;
   place-items: center;
-  margin: auto calc(( 100% - var(--bannerWidth) )/2);
+  margin: auto calc(( 100% - var(--bannerWidth) )/2) calc(var(--W-height)/3.5);
   width: var(--bannerWidth);
   -ms-grid-column-align: center;
       justify-self: center;
