@@ -33,8 +33,9 @@ const router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', {
      title: 'resthome', 
-      page: 'recettes'
-     });
+    page: 'recettes'
+  });
+});
 
 
 
@@ -43,8 +44,9 @@ router.get('/', function(req, res, next) {
 router.get('/', function(req, res, next) {
   res.render('index',{
     title: 'resthome', 
-     page: 'accueil'
-    });
+    page: 'accueil'
+  });
+});
 /*
 for(route in ["menus", "recettes", "search"]) {
   router.get(`/${route}`, function(req, res, next) {
