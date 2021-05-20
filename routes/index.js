@@ -4,6 +4,11 @@ const router = express.Router();
 /* pour dylan => ajoute a cette liste le nom de toutes les pages que tu compte créer et leur descriptions.
   List des page du site:
     - Accueil: page d'accueil
+    - Menu : interface des menus
+    - Connexion : espace de connexion et de création de compte
+    - Recette :  interface des recettes 
+    - Profile : acces espace personnel
+    
 */
 
 /*
@@ -25,10 +30,21 @@ const router = express.Router();
 
 */
 
+router.get('/', function(req, res, next) {
+  res.render('index', {
+     title: 'resthome', 
+      page: 'recettes'
+     });
+
+
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+  res.render('index',{
+    title: 'resthome', 
+     page: 'accueil'
+    });
 /*
 for(route in ["menus", "recettes", "search"]) {
   router.get(`/${route}`, function(req, res, next) {
