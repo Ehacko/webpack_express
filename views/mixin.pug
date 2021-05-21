@@ -44,3 +44,14 @@ mixin banner(text, priority)
   +heading(text, priority)(class="W-banner")
     div
     div
+
+mixin slidingItem (name, meals)
+  div
+    h3=name
+    .mdj
+      each meal in meals
+      div
+        a(href=meal.url)
+          div
+            img(src=meal.src, alt=meal.alt)
+          h4= meal.name
