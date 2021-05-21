@@ -7,7 +7,7 @@ block content
     -recettes.push({name:'recetteB', url:'/recettes/?name=recetteB'})
     -recettes.push({name:'recetteC', url:'/recettes/?name=recetteC'})
     -recettes.push({name:'recetteD', url:'/recettes/?name=recetteD'})
-    each recette in recettes
+    for recette in recettes
       a.W-banner(value=recette.name href=recette.url)
   else
     p welcome
