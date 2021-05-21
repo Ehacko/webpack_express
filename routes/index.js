@@ -29,22 +29,20 @@ const router = express.Router();
   Data: objet contenant les donnés à faire passer au fichier pug
 
 */
-
-router.get('/', function(req, res, next) {
-  res.render('index', {
-     title: 'resthome', 
-    page: 'recettes'
-  });
-});
-
-
-
+const title = "Resthome";
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index',{
-    title: 'resthome', 
-    page: 'accueil'
+    title, 
+    page: 'Accueil'
+  });
+});
+
+router.get('/recettes', function(req, res, next) {
+  res.render('index', {
+    title, 
+    page: 'Recettes'
   });
 });
 /*
