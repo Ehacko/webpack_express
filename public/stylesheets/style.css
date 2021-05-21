@@ -1,4 +1,8 @@
 body {
+  background: rgba(25, 25, 25);
+  color: rgba(225, 225, 225, .9);
+}
+.W-banner{
   --W-height: 50px;
   --W-primaryR: 25;
   --W-secondaryR: 225;
@@ -6,6 +10,9 @@ body {
   --W-secondaryG: 225;
   --W-primaryB: 25;
   --W-secondaryB: 225;
-  background: rgba(25, 25, 25);
-  color: rgba(225, 225, 225, .9);
+}
+.p-body{
+  margin-top: 1.5em;
+  display: grid;
+  gap: .5em;
 }
