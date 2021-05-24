@@ -44,6 +44,7 @@ mixin heading(priority)
 mixin framed(priority)
   if Number(priority) && priority >= 6
     +heading(priority).W-banner&attributes(attributes)
+      block
   else
     p.W-banner&attributes(attributes)
       block
