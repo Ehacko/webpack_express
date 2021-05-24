@@ -36,12 +36,12 @@ header {
   float: right;
 }
 .navlinks{
-  display: flex;
-  margin: 0 10vw;
+  display: grid;
   text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .navlinks>*{
-  margin: auto;
+  margin: auto 0;
   min-width: 100px;
   width: 20vw;
 }
