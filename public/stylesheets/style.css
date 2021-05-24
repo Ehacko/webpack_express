@@ -2,6 +2,8 @@ body {
   margin: 0;
   background: rgba(25, 25, 25);
   color: rgba(225, 225, 225, .9);
+  max-width: 1000px;
+  margin: 1em auto;
 }
 .W-banner{
   --W-height: 50px;
@@ -11,6 +13,7 @@ body {
   --W-secondaryG: 225;
   --W-primaryB: 25;
   --W-secondaryB: 225;
+  --W-margin: 1em;
 }
 .p-body{
   margin-top: 1.5em;
