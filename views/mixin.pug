@@ -12,46 +12,54 @@
 
 //- Pour maikel => ajoute a cette list le nom de tout les composants que tu compte créer et leur descriptions.
   List des mixin:
-    heading: crée une balise h1-h6. si la priority n'est pas definis alors un paragraph sera créé
-    banner: crée une banniere en utilisant le mixin heading.
-    navbar: 
+    heading: crée une balise h1-h6
+    framed: crée un encader en utilisant le mixin heading. si la priority n'est pas definis alors un paragraph sera créé
+    banner: crée une banniere en utilisant le mixin framed.
+    slidingItem: crée un element qui glisse "on hover"
+    thumbnail: crée une vignette
 
-mixin heading(text, priority)
+mixin heading(priority)
   case priority 
       when 1
-        h1&attributes(attributes)=text
+        h1&attributes(attributes)
           block 
       when 2
-        h2&attributes(attributes)=text
+        h2&attributes(attributes)
           block 
       when 3
-        h3&attributes(attributes)=text
+        h3&attributes(attributes)
           block 
       when 4
-        h4&attributes(attributes)=text
+        h4&attributes(attributes)
           block 
       when 5
-        h5&attributes(attributes)=text
+        h5&attributes(attributes)
           block 
       when 6
-        h6&attributes(attributes)=text
+        h6&attributes(attributes)
           block
       default
-        p&attributes(attributes)=text
-          block
+        p #{priority} is not between 1 and 6
 
+mixin framed(priority)
+  if Number(priority) && priority >= 6
+    +heading(priority).W-banner&attributes(attributes)
+  else
+    p.W-banner&attributes(attributes)
+      block
+  
 mixin banner(text, priority)
-  +heading(undefined, priority)(class="W-banner", value=text)
+  +framed(priority)(value=text)
     div
     div
 
-mixin slidingItem (name, meals)
+mixin slidingItem(text)
   div
-    h3=name
+    h3=text
     .mdj
-      each meal in meals
-        div
-          a(href=meal.url)
-            div
-              img(src=meal.src, alt=meal.alt)
-            h4= meal.name
+      block
+
+mixin thumbnail(info)
+  div.W-cardT2
+    img(src=info.src, alt=info.alt)
+    span=info.name

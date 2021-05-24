@@ -2,13 +2,12 @@ extends layout
 
 block content
   .p-body
-    if page === "Recettes" && !params.get.name
-      -const recettes = []
-      -recettes.push({name:'recetteA', url:'/recettes/?name=recetteA'})
-      -recettes.push({name:'recetteB', url:'/recettes/?name=recetteB'})
-      -recettes.push({name:'recetteC', url:'/recettes/?name=recetteC'})
-      -recettes.push({name:'recetteD', url:'/recettes/?name=recetteD'})
-      for recette in recettes
-        a.W-banner(value=recette.name href=recette.url)
-    else
-      p welcome
+    case true
+      when (page === "Recettes" && !params.get.name)
+        include recettes
+      when (page === "Recettes" && params.get.name)
+        include recette
+      when (page === "Menus" && !params.get.name)
+        include menus
+      when (page === "Menus" && params.get.name)
+        include menu

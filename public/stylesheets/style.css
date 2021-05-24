@@ -16,3 +16,34 @@ body {
   display: grid;
   gap: .5em;
 }
+header {
+  border: solid .1px transparent;
+  margin: 2.5vh 0;
+}
+.navlinks a{
+  color: rgba(225, 225, 225, 1);
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.navlinks h1{
+  margin: auto;
+}
+.ico>:first-child{
+  float: left;
+}
+.ico>:last-child{
+  float: right;
+}
+.navlinks{
+  display: flex;
+  margin: 0 10vw;
+  text-align: center;
+}
+.navlinks>*{
+  margin: auto;
+  min-width: 100px;
+  width: 20vw;
+}
+.navlinks>:first-child, .navlinks>:last-child{
+  border-bottom: solid 2px rgba(225, 225, 225, 1);
+}

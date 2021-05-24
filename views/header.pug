@@ -1,3 +1,11 @@
-header 
+header
+  div.ico
+    i
+    i
+  div.navlinks
+    a(href="/?Recepices=All") Recettes
+    div
+      a(href="/?Menus=All") Menus
+      h1=Title
+    a(href="/?Search=All") Recherche
   +banner(params && params.get.name ? params.get.name :page, 2)
-
