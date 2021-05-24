@@ -38,13 +38,14 @@ header {
 .navlinks{
   display: grid;
   text-align: center;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 5px;
 }
 .navlinks>*{
-  min-width: 100px;
-  width: 20vw;
+  min-width: fit-content;
   justify-self: center;
   align-self: center;
+  padding: 2px;
 }
 .navlinks>:first-child, .navlinks>:last-child{
   border-bottom: solid 2px rgba(225, 225, 225, 1);

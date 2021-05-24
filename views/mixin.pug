@@ -42,7 +42,7 @@ mixin heading(priority)
         p #{priority} is not between 1 and 6
 
 mixin framed(priority)
-  if priority >= 6
+  if Number(priority)
     +heading(priority).W-banner&attributes(attributes)
       block
   else

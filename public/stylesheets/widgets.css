@@ -116,7 +116,7 @@
   display: grid;
   position: relative;
   margin: var(--W-margin);
-  width: 100%;
+  min-width: 200px;
   height: var(--W-height);
   overflow: hidden;
   justify-items: center;
