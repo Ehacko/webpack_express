@@ -41,9 +41,10 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .navlinks>*{
-  margin: auto 0;
   min-width: 100px;
   width: 20vw;
+  justify-self: center;
+  align-self: center;
 }
 .navlinks>:first-child, .navlinks>:last-child{
   border-bottom: solid 2px rgba(225, 225, 225, 1);
