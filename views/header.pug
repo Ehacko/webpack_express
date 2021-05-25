@@ -3,9 +3,9 @@ header
     i.dummy
     i.dummy
   div.navlinks
-    a(href="/?Recepices=All") Recettes
+    a(href="/recettes") Recettes
     div
-      a(href="/?Menus=All") Menus
+      a(href="/menus") Menus
       h1=title
-    a(href="/?Search=All") Recherche
+    a(href="/recherche") Recherche
   +banner(params && params.get.name ? params.get.name :page, 2)

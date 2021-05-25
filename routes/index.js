@@ -29,28 +29,48 @@ const router = express.Router();
   Data: objet contenant les donnés à faire passer au fichier pug
 
 */
-const title = "Resthome";
+const title = "Resthome",
+// declare app routes
+routes = [
+  // homepage
+  {
+    request: 'get',
+    path: "",
+    name: "Accueil",
+  },
+  {
+    request: 'get',
+    path: "recettes",
+    name: "Recettes",
+    data: {
+      recettes: ((a) => {let c=[]; for(let i=1; i<=a; i++ ){ c.push({name:`Recette ${i}`, url:`/recettes/?name=recette_${i}`}) } return c })(10)
+    }
+  }
+];
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index',{
-    title, 
-    page: 'Accueil'
-  });
-});
+//generate declared routes
+for(const route of routes) {
+  
+  router[route.request](`/${route.path}`, function(req, res, next) {
 
-router.get('/recettes', function(req, res, next) {
-  res.render('index', {
-    title, 
-    page: 'Recettes',
-    params: {get: req.query}
+    res.render('index', {
+
+      title,
+      page: route.name ? route.name : "need a name",
+      params: {
+        ... ['get','all'].includes(route.request) ? {get: req.query} : {},
+        ... ['post','all'].includes(route.request) ? {post: req.body} : {},
+      },
+      ... route.data ? route.data : {},
+    });
+
   });
-});
-/*
-for(route in ["menus", "recettes", "search"]) {
-  router.get(`/${route}`, function(req, res, next) {
-    res.render('index', { title: route });
-  });
+  
 }
-*/
+
+/* GET all undeclared routes. */
+router.get('/*', function(req, res, next) {
+  res.redirect('/')
+});
+
 module.exports = router;
