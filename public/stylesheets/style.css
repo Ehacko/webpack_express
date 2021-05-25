@@ -52,6 +52,7 @@ i.dummy::before {
   float: right;
 }
 .navlinks{
+  margin-top: 1em;
   display: grid;
   text-align: center;
   grid-template-columns: 1fr auto 1fr;
