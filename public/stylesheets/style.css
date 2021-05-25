@@ -32,6 +32,19 @@ header {
 .navlinks h1{
   margin: auto;
 }
+i.dummy {
+  display: inline-grid;
+  background: whitesmoke;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  color: darkslategrey;
+  justify-content: center;
+  align-content: center;
+}
+i.dummy::before {
+  content: "icon";
+}
 .ico>:first-child{
   float: left;
 }
