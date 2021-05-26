@@ -6,6 +6,6 @@ header
     a(href="/recettes") Recettes
     div
       a(href="/menus") Menus
-      h1=title
+      a(href="/"): h1=title
     a(href="/recherche") Recherche
   +banner(params && params.get.name ? params.get.name :page, 2)
