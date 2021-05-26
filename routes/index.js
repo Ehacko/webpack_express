@@ -29,24 +29,25 @@ const router = express.Router();
   Data: objet contenant les donnés à faire passer au fichier pug
 
 */
-const title = "Resthome",
-// declare app routes
-routes = [
-  // homepage
-  {
-    request: 'get',
-    path: "",
-    name: "Accueil",
-  },
-  {
-    request: 'get',
-    path: "recettes",
-    name: "Recettes",
-    data: {
-      recettes: ((a) => {let c=[]; for(let i=1; i<=a; i++ ){ c.push({name:`Recette ${i}`, url:`/recettes/?name=recette_${i}`}) } return c })(10)
+const
+  title = "Resthome",
+  // declare app routes
+  routes = [
+    // homepage
+    {
+      request: 'get',
+      path: "",
+      name: "Accueil",
+    },
+    {
+      request: 'get',
+      path: "recettes",
+      name: "Recettes",
+      data: {
+        recettes: ((a) => {let c=[]; for(let i=1; i<=a; i++ ){ c.push({name:`Recette ${i}`, url:`/recettes/?name=recette_${i}`}) } return c })(10)
+      }
     }
-  }
-];
+  ];
 
 //generate declared routes
 for(const route of routes) {
