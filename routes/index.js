@@ -43,8 +43,8 @@ const
     // page menu
     {
       request: 'get',
-      path: "menu",
-      name: "Menu",
+      path: "menus",
+      name: "Menus",
 
 
     },
