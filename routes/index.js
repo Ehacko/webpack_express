@@ -3,10 +3,10 @@ const router = express.Router();
 
 /* pour dylan => ajoute a cette liste le nom de toutes les pages que tu compte créer et leur descriptions.
   List des page du site:
-    - Accueil: page d'accueil
-    - Menu : interface des menus
+    - Accueil : page d'accueil
+    - Menus : interface des menus
     - Connexion : espace de connexion et de création de compte
-    - Recette :  interface des recettes 
+    - Recettes :  interface des recettes 
     - Profile : acces espace personnel
     
 */
@@ -38,7 +38,9 @@ const
       request: 'get',
       path: "",
       name: "Accueil",
+
     },
+    // page recettes
     {
       request: 'get',
       path: "recettes",
@@ -46,7 +48,7 @@ const
       data: {
         recettes: ((a) => {let c=[]; for(let i=1; i<=a; i++ ){ c.push({name:`Recette ${i}`, url:`/recettes/?name=recette_${i}`}) } return c })(10)
       }
-    }
+    },
   ];
 
 //generate declared routes
@@ -58,11 +60,12 @@ for(const route of routes) {
 
       title,
       page: route.name ? route.name : "need a name",
+      bannerText: req.query.name || route.name,
       params: {
         ... ['get','all'].includes(route.request) ? {get: req.query} : {},
         ... ['post','all'].includes(route.request) ? {post: req.body} : {},
       },
-      ... route.data ? route.data : {},
+      ... route.data || {},
     });
 
   });
