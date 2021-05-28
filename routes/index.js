@@ -47,7 +47,7 @@ const
       name: "Menu",
 
 
-    }
+    },
     // page recettes
     {
       request: 'get',
