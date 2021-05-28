@@ -40,6 +40,14 @@ const
       name: "Accueil",
 
     },
+    // page menu
+    {
+      request: 'get',
+      path: "menu",
+      name: "Menu",
+
+
+    }
     // page recettes
     {
       request: 'get',
