@@ -1,1 +1,56 @@
 h2 here your menus list
+
+
+
+
+ <div class="container">
+      <div class="row">
+        <div class="col-8"> 
+            <a href="recette-petitdej.php"> <button class="btnptj" type="button" class="btn btn-primary btn-lg btn-block">Petit déjeuner</button></a>
+              <a href="recette-dejeuner.php"> <button class="djn" type="button" class="btn btn-primary btn-lg btn-block">Déjeuner</button></a>  
+        </div>
+        <div class="col-4">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+             <a href="recette-diner.php"> <button  class="dnr" type="button" class="btn btn-primary btn-lg btn-block" >Diner</button></a>      
+             <a href="recette-encas.php"> <button class="ecs" type="button" class="btn btn-primary btn-lg btn-block">Encas</button></a>     
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+    </div>
+
+
+                
+setlocale(LC_TIME, 'fr_FR');
+date_default_timezone_set('America/Guadeloupe');
+//echo utf8_encode(strftime('%A %d %B %Y'));
+//echo date('m-d-Y', strtotime('+15 days'));
+
+//echo date('l d F Y');  // jeudi 22 avril 2021
+
+//echo date('l d F Y'); 
+// echo date('d-m-Y', strtotime('+7 days'));
+
+
+
+for($i=0; $i < 6; $i++){
+
+<div class="container">
+      <div class="row">
+        <div class="col-8">
+            <a href="index.php"> 
+              <button class="btnptj" type="button" class="btn btn-primary btn-lg btn-block">
+              echo date('l d F Y', strtotime("+ $i days"));    
+
+            </button></a>
+
+
+        </div>
