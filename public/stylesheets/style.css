@@ -69,3 +69,30 @@ i.dummy::before {
 .navlinks>:first-child, .navlinks>:last-child{
   border-bottom: solid 2px rgba(225, 225, 225, 1);
 }
+
+.slidingItem {
+  margin: 0 10%;
+  border: transparent dashed 2px;
+}
+.slidingItem:not(:last-child){
+  border-bottom-color: currentColor;
+}
+.slidinginner{
+  display: grid;
+  grid-template-columns: 100% 100%;
+  margin: 0 2.5%;
+  gap: 2.5%;
+  overflow: hidden;
+}
+.slidinginner:hover>*{
+  transform: translateX(-102.5%);
+}
+.slidinginner>*{
+  transition: all 1s ease;
+}
+.slidinginner>h3{
+  margin: 2.5% 0;
+  border: solid 1px currentColor;
+  padding: .5em;
+  text-align: center;
+}

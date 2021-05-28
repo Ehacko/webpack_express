@@ -55,10 +55,11 @@ mixin banner(text, priority)
     div
 
 mixin slidingItem(text)
-  div
-    h3=text
-    .mdj
-      block
+  .slidingItem
+    .slidinginner
+      h3=text
+      .mdj
+        block
 
 mixin thumbnail(info)
   div.W-cardT2
