@@ -11,6 +11,7 @@ body {
   --W-secondaryG: 225;
   --W-primaryB: 25;
   --W-secondaryB: 225;
+  font-size: 1rem;
 }
 h2.W-banner {
   --W-margin: 1em;
