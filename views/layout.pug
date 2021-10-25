@@ -2,6 +2,23 @@ include mixin
 doctype html
 html
   head
+    //- link(rel="icon" type="image/png" href="/imgs/logo.avif")
+    //- meta tag
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="RestHome est une application d'habitude alimentaire")
+    meta(property="og:title" content="RestHome")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="/")
+    //- meta(property="og:image" content="/imgs/preview.avif")
+    meta(property="og:description" content="RestHome est une application d'habitude alimentaire")
+    meta(http-equiv="Content-Security-Policy" content="
+      base-uri: 'self';
+      default-src 'self';
+      img-src * data:;
+      object-src 'none';
+    ")
     title #{title}: #{page}
     link(rel='stylesheet', href='/stylesheets/widgets.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
